@@ -115,8 +115,15 @@ transcoder.save_model('cross_layer_transcoder_gpt2.pt')
 ### Running the Example Script
 
 ```bash
-python practice_run.py
+# Using Poetry (recommended)
+poetry run python examples/practice_run.py --percent_samples 1
+
+# Or activate the virtual environment first
+poetry shell
+python examples/practice_run.py --percent_samples 1
 ```
+
+**Note:** The `--percent_samples` argument specifies what percentage of the dataset to use (1-100). For a quick test, use `--percent_samples 1`. You can also use `--num_samples` to specify an exact number of samples (minimum 100).
 
 This will:
 1. Initialize the cross-layer transcoder with GPT-2 Small

@@ -489,7 +489,6 @@ class OpenCrossLayerTranscoder(nn.Module):
         # Forward pass
         with torch.no_grad():
             outputs = self.forward(input_ids)
-        print([k, v] for k, v in outputs.items())
 
         return outputs['feature_activations']
     
